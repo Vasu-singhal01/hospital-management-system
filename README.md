@@ -1,6 +1,17 @@
+## Screenshots
+
+![User interface](ui.png)
+
+![Admin dashboard](dashboard.png)
+
+![Lab results](labresult.png)
+
+![Appointments](appointment.png)
+
+S
 # Hospital Management System (MySQL + MongoDB + Flask)
 
-Advanced DBMS project, Bennett University. Vasu Singhal (E23CSEU0879) and Vaibhav Aggarwal (E23CSEU0878).
+Advanced DBMS project, Bennett University. Vasu Singhal (E23CSEU0879). 
 
 Structured hospital data (patients, doctors, appointments, billing, beds) is stored in **MySQL**.
 Clinical documents (medical reports, prescriptions, lab results) are stored in **MongoDB**.

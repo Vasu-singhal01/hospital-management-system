@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hospital Management System</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div id="login" class="login" hidden>
+    <section class="login-intro">
+      <h1>Hospital Management System</h1>
+      <p>Structured records live in MySQL. Reports, prescriptions and lab results live in MongoDB. One Flask API connects both.</p>
+      <ol class="flow" aria-label="System flow">
+        <li>Browser</li><li>Flask API</li><li class="split"><span>MySQL</span><span>MongoDB</span></li>
+      </ol>
+      <div id="loginHealth" class="health"></div>
+    </section>
+    <section class="login-card">
+      <div class="tabs" role="tablist">
+        <button role="tab" id="tabIn" aria-selected="true">Sign in</button>
+        <button role="tab" id="tabReg" aria-selected="false">Register as patient</button>
+      </div>
+      <form id="loginForm">
+        <label class="fld"><span>Username</span><input name="username" autocomplete="username" required></label>
+        <label class="fld"><span>Password</span><input name="password" type="password" autocomplete="current-password" required></label>
+        <p class="formerr" id="loginErr" role="alert" hidden></p>
+        <button class="btn wide" type="submit">Sign in</button>
+        <div class="demo">
+          <span>Demo accounts</span>
+          <button type="button" class="chip" data-u="admin" data-p="admin123">Admin</button>
+          <button type="button" class="chip" data-u="dr.sharma" data-p="doctor123">Doctor</button>
+          <button type="button" class="chip" data-u="rohan" data-p="patient123">Patient</button>
+        </div>
+      </form>
+      <form id="regForm" hidden></form>
+    </section>
+  </div>
+
+  <div id="shell" class="shell" hidden>
+    <aside class="side">
+      <div class="brand">Hospital<br>Management</div>
+      <nav id="nav" aria-label="Main"></nav>
+      <div class="side-foot">
+        <div class="who"><strong id="whoName"></strong><span id="whoRole"></span></div>
+        <div id="sideHealth" class="health"></div>
+        <button class="btn ghost light" id="logout">Sign out</button>
+      </div>
+    </aside>
+    <main id="main" tabindex="-1"></main>
+  </div>
+
+  <div id="toasts" aria-live="polite"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
